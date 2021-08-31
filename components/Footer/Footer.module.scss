@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #c0c0c0;
+  width: 100%;
+  padding: 20px 10%;
+  color: #787878;
+
+  p {
+    font-size: 14px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+
+    a {
+      color: #787878;
+      margin: 0 4px;
+    }
+  }
+}

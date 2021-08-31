@@ -1,0 +1,26 @@
+$colors: (
+  "primary": #7827CA,
+  "black": #4d4d4d,
+  "bg": #F1F1F1,
+  "white": #ffffff,
+);
+
+$screens: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "2xl": 1536px,
+);
+
+@function color($key) {
+  @return map-get($colors, $key)
+}
+
+@mixin mq($key) {
+  $size: map-get($screens, $key);
+
+  @media (min-width: $size) {
+    @content
+  }
+}
