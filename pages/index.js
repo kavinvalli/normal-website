@@ -25,7 +25,7 @@ export default function Home({
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await getNowPlaying();
 
   if (response.status === 204 || response.status > 400) {
