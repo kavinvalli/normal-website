@@ -6,6 +6,19 @@
   padding: 32px;
   display: flex;
   color: black;
+  grid-column: 1 / span 2;
+
+  &:nth-child(odd) {
+    @include mq("md") {
+      grid-column: 1 / span 1;
+    }
+  }
+
+  &:nth-child(even) {
+    @include mq("md") {
+      grid-column: 2 / span 1;
+    }
+  }
 
   img {
     object-fit: cover;
@@ -16,9 +29,12 @@
 .largeProjectCard {
   grid-column: 1 / span 2;
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   height: 150px;
   color: color("white");
   position: relative;
+  border-radius: 32px;
 
   div {
     position: absolute;
@@ -60,11 +76,10 @@
 .allProjects {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: 1fr;
   grid-gap: 32px;
-  @include mq("md") {
-    grid-template-columns: 1fr 1fr;
-  }
+  grid-template-columns: 1fr 1fr;
+  // @include mq("md") {
+  // }
 
   div {
     margin-left: 16px;

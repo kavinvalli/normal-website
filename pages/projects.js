@@ -60,18 +60,21 @@ const ProjectCard = ({ project }) => {
     string.length > MAXLENGTH ? `${string.substring(0, MAXLENGTH)}...` : string;
 
   return (
-    <a href={link} target="_blank" rel="noreferrer">
-      <div className={styles.projectCard}>
-        <img
-          src={`https://kavin.me/images/projects/${image}`}
-          height="88"
-          width="88"
-          alt={`${name} image`}
-        />
-        <div className="content">
-          <p style={{ fontSize: "18px" }}>{truncateString(name)}</p>
-          <p>{description}</p>
-        </div>
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className={styles.projectCard}
+    >
+      <img
+        src={`https://kavin.me/images/projects/${image}`}
+        height="88"
+        width="88"
+        alt={`${name} image`}
+      />
+      <div className="content">
+        <p style={{ fontSize: "18px" }}>{truncateString(name)}</p>
+        <p>{description}</p>
       </div>
     </a>
   );
