@@ -35,17 +35,19 @@ const LargeProjectCard = ({ project }) => {
     string.length > MAXLENGTH ? `${string.substring(0, MAXLENGTH)}...` : string;
 
   return (
-    <div
-      className={styles.largeProjectCard}
-      style={{
-        backgroundImage: `url("https://kavin.me/images/projects/${largeImage}")`,
-      }}
-    >
-      <div className="content">
-        <p style={{ fontSize: "24px" }}>{name}</p>
-        <p style={{ fontSiz: "12px" }}>{description}</p>
+    <a href={link} target="_blank" rel="noreferrer">
+      <div
+        className={styles.largeProjectCard}
+        style={{
+          backgroundImage: `url("https://kavin.me/images/projects/${largeImage}")`,
+        }}
+      >
+        <div className="content">
+          <p style={{ fontSize: "24px" }}>{name}</p>
+          <p style={{ fontSiz: "12px" }}>{description}</p>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
