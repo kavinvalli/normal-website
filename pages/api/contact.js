@@ -13,7 +13,7 @@ export default function handler(req, res) {
 
   const mailData = {
     from: process.env.GMAIL_EMAIL,
-    to: "mail@kavin.me",
+    to: ["mail@kavin.me", "kavinvalli@gmail.com"],
     subject: `Message from ${req.body.name}`,
     text: req.body.message,
     html: `<div>${req.body.message}</div>`,
