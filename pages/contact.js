@@ -42,7 +42,11 @@ function Contact() {
         CONTACT ME
       </h2>
       <div className={styles.icons}>
-        <a href="https://github.com/kavin25" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/kavinvalli"
+          target="_blank"
+          rel="noreferrer"
+        >
           <i className="fab fa-github"></i>
         </a>
         <a href="mailto:mail@kavin.me" target="_blank" rel="noreferrer">
