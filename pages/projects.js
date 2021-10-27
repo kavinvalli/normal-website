@@ -3,10 +3,24 @@ import ProjectHero from "../components/page/Projects/ProjectHero";
 import styles from "../styles/Projects.module.scss";
 
 function Projects() {
-  const [_, setDo] = useState("");
+  const [projects, setProjects] = useState([]);
+
   useEffect(() => {
-    setTimeout(() => setDo("aaaa"), 1000);
+    async function getProjects() {
+      const projects = await (
+        await fetch("https://www.kavin.me/api/projects", {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        })
+      ).json();
+      setProjects(projects);
+    }
+
+    getProjects();
   }, []);
+
   if (typeof projects !== "undefined") {
     return (
       <div className="container" style={{ marginBottom: "30px" }}>
@@ -14,7 +28,7 @@ function Projects() {
         <div className={styles.allProjects}>
           {projects.map((project, idx) =>
             idx < 2 ? (
-              <LargeProjectCard project={project} />
+              <LargeProjectCard project={project} key={idx} />
             ) : (
               <ProjectCard project={project} key={idx} />
             )

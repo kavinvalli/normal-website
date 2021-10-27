@@ -20,7 +20,6 @@ function Layout({ children }) {
       <Navbar />
       <main>{children}</main>
       <Footer />
-      <Script src="https://kavin.me/js/contents.min.js" />
     </>
   );
 }
