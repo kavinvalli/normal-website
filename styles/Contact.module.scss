@@ -12,6 +12,13 @@
   }
 }
 
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .contactCard {
   margin-top: 16px;
   background-color: color("white");
