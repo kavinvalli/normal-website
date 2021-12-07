@@ -1,44 +1,29 @@
 export default function handler(req, res) {
-  // let nodemailer = require("nodemailer");
-  // require("dotenv").config();
-  // const transporter = nodemailer.createTransport({
-  //   port: 465,
-  //   host: "smtp.gmail.com",
-  //   auth: {
-  //     user: process.env.GMAIL_EMAIL,
-  //     pass: process.env.GMAIL_PASSWORD,
-  //   },
-  //   secure: true,
-  // });
+  const formData = require("form-data");
+  const Mailgun = require("mailgun.js");
+  const DOMAIN = "mg.kavin.me";
 
-  // const mailData = {
-  //   from: process.env.GMAIL_EMAIL,
-  //   to: ["mail@kavin.me", "kavinvalli@gmail.com"],
-  //   subject: `Message from ${req.body.name}`,
-  //   text: req.body.message,
-  //   html: `<div>${req.body.message}</div>`,
-  // };
+  const mailgun = new Mailgun(formData);
+  const client = mailgun.client({
+    username: "api",
+    key: process.env.MAILGUN_API_KEY,
+  });
 
-  // transporter.sendMail(mailData, (err, info) => {
-  //   if (err) {
-  //     console.log(err);
-  //     return res.status(200).json({ error: err.toString() });
-  //   } else {
-  //     console.log(info);
-  //   }
-  // });
-  const mailgun = require("mailgun-js");
-  const DOMAIN = 'mg.kavin.me';
-  const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: DOMAIN});
-  const data = {
-    from: 'Kavin Website <website@mg.kavin.me>',
-    to: 'mail@kavin.me, kavinvalli@gmail.com',
+  const messageData = {
+    from: "Kavin Website <website@mg.kavin.me>",
+    to: "mail@kavin.me, kavinvalli@gmail.com",
     subject: `Message from ${req.body.name}`,
     text: req.body.message,
   };
-  mg.messages().send(data, function (_, body) {
-    console.log(body);
-  });
+
+  client.messages
+    .create(DOMAIN, messageData)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 
   return res.status(200).json({});
 }
