@@ -27,7 +27,7 @@ function Hero() {
         <a href="https://dpskrp.net" target="_blank" rel="noreferrer">
           Delhi Public School, R.K. Puram
         </a>
-        <br />I am also a volunteer(developer) at the New Delhi Space Society, a
+        <br />I am also a Chapter Officer at the <a href="https://newdelhi.nss.org" target="_blank" rel="noreferrer">New Delhi Space Society</a>, a
         chapter of the National Space Society
       </p>
       <i className={`fas fa-chevron-down ${styles.down}`}></i>
