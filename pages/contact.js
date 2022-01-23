@@ -35,7 +35,6 @@ function Contact() {
   // };
   return (
     <div
-      className="container"
       className={styles.contactContainer}
       style={{ height: "calc(100vh - 155px)" }}
     >
