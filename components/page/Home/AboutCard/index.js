@@ -1,8 +1,8 @@
 import styles from "./AboutCard.module.scss";
 
-function AboutCard() {
+function AboutCard({ aboutRef }) {
   return (
-    <div className={styles.aboutSection}>
+    <div ref={aboutRef} className={styles.aboutSection}>
       <div className={styles.aboutCard}>
         <div className="edu">
           <h3>Education</h3>

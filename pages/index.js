@@ -2,6 +2,7 @@ import AboutCard from "../components/page/Home/AboutCard";
 import Hero from "../components/page/Home/Hero";
 import Spotify from "../components/page/Home/Spotify";
 import { getNowPlaying } from "../lib/spotify";
+import useScroll from "../lib/useScroll";
 
 export default function Home({
   albumImageUrl,
@@ -10,10 +11,11 @@ export default function Home({
   songUrl,
   title,
 }) {
+  const [aboutRef, scrollToAboutRef] = useScroll();
   return (
     <>
-      <Hero />
-      <AboutCard />
+      <Hero onDownIconClick={scrollToAboutRef} />
+      <AboutCard aboutRef={aboutRef} />
       <Spotify
         albumImageUrl={albumImageUrl}
         artist={artist}

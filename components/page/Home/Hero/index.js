@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Hero.module.scss";
 
-function Hero() {
+function Hero({ onDownIconClick }) {
   return (
     <section className={styles.hero}>
       <div className="image-container">
@@ -27,10 +27,16 @@ function Hero() {
         <a href="https://dpskrp.net" target="_blank" rel="noreferrer">
           Delhi Public School, R.K. Puram
         </a>
-        <br />I am also a Chapter Officer at the <a href="https://newdelhi.nss.org" target="_blank" rel="noreferrer">New Delhi Space Society</a>, a
-        chapter of the National Space Society
+        <br />I am also a Chapter Officer at the{" "}
+        <a href="https://newdelhi.nss.org" target="_blank" rel="noreferrer">
+          New Delhi Space Society
+        </a>
+        , a chapter of the National Space Society
       </p>
-      <i className={`fas fa-chevron-down ${styles.down}`}></i>
+      <i
+        onClick={onDownIconClick}
+        className={`fas fa-chevron-down ${styles.down}`}
+      ></i>
     </section>
   );
 }
