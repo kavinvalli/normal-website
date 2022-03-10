@@ -2,25 +2,25 @@ import { useEffect, useState } from "react";
 import ProjectHero from "../components/page/Projects/ProjectHero";
 import styles from "../styles/Projects.module.scss";
 
-function Projects() {
-  const [projects, setProjects] = useState([]);
+export async function getStaticProps() {
+  const projects = await (
+    await fetch("https://www.kavin.me/api/projects", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+  ).json();
 
-  useEffect(() => {
-    async function getProjects() {
-      const projects = await (
-        await fetch("https://www.kavin.me/api/projects", {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        })
-      ).json();
-      setProjects(projects);
-    }
+  return {
+    props: {
+      projects,
+    },
+    revalidate: 30 * 60, // 30 minutes
+  };
+}
 
-    getProjects();
-  }, []);
-
+function Projects({ projects }) {
   if (typeof projects !== "undefined") {
     return (
       <div className="container" style={{ marginBottom: "30px" }}>
