@@ -5,12 +5,23 @@
   justify-content: space-evenly;
 
   a {
-    color: color("black");
+    color: var(--black);
     padding: 32px;
   }
 
+  button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 2px solid var(--black);
+    background-color: transparent;
+    color: var(--black);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 
 .active {
-  color: color("primary") !important;
+  color: var(--primary) !important;
 }

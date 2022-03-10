@@ -9,6 +9,11 @@ function Navbar() {
     { text: "Projects", link: "/projects" },
     { text: "Contact", link: "/contact" },
   ];
+  function changeTheme() {
+    if (typeof window != undefined) {
+      document.body.classList.toggle("darkTheme");
+    }
+  }
   return (
     <nav className={styles.navbar}>
       {navLinks.map(({ text, link }, idx) => (
@@ -18,6 +23,9 @@ function Navbar() {
           </a>
         </Link>
       ))}
+      <button onClick={changeTheme}>
+        <i className="fas fa-moon"></i>
+      </button>
     </nav>
   );
 }

@@ -1,4 +1,4 @@
-@import '../../../../styles/_variables.scss';
+@import "../../../../styles/_variables.scss";
 
 .hero {
   height: calc(100vh - 89px);
@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 
   div {
     width: 242px;
@@ -23,7 +22,6 @@
     border-radius: 50%;
     z-index: 1;
     // box-shadow: inset 0 0 0 0 100vmax rgba(color("primary"), 0.13);
-
   }
 }
 
@@ -31,7 +29,7 @@
   width: 248px;
   height: 248px;
   border-radius: 50%;
-  background-color: color("primary");
+  background-color: var(--primary);
   position: absolute;
   top: -256px;
   left: 8px;
@@ -43,7 +41,7 @@
   border-radius: 50%;
   position: absolute;
   top: -492px;
-  background-color: rgba(color("primary"), 0.12);
+  background-color: rgba(var(--primary), 0.12);
   z-index: 2;
 }
 

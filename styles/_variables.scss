@@ -1,8 +1,16 @@
 $colors: (
-  "primary": #7827CA,
-  "black": #4d4d4d,
-  "bg": #F1F1F1,
-  "white": #ffffff,
+  lightTheme: (
+    "primary": #7827ca,
+    "black": #4d4d4d,
+    "bg": #f1f1f1,
+    "white": #ffffff,
+  ),
+  darkTheme: (
+    "primary": #7827ca,
+    "black": #f0f6fc,
+    "bg": #161b22,
+    "white": #121212,
+  ),
 );
 
 $screens: (
@@ -13,14 +21,14 @@ $screens: (
   "2xl": 1536px,
 );
 
-@function color($key) {
-  @return map-get($colors, $key)
+@function color($key, $theme) {
+  @return map-get($colors, $theme, $key);
 }
 
 @mixin mq($key) {
   $size: map-get($screens, $key);
 
   @media (min-width: $size) {
-    @content
+    @content;
   }
 }

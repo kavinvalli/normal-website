@@ -1,17 +1,16 @@
-@import '../../../styles/_variables.scss';
+@import "../../../styles/_variables.scss";
 
 .projectHero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: color("white");
+  background-color: var(--white);
   padding: 90px;
   border-radius: 36px;
-  box-shadow: 15px 15px 0 color("primary");
+  box-shadow: 15px 15px 0 var(--primary);
 
   h2 {
     font-size: 48px;
-    color: color("primary");
+    color: var(--primary);
   }
 }
-

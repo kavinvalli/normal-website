@@ -13,7 +13,7 @@ export default function Document() {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <body>
+      <body className="darkTheme">
         <Main />
         <NextScript />
       </body>

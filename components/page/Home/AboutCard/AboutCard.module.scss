@@ -7,7 +7,7 @@
   margin: 40px 0;
 
   .aboutCard {
-    background-color: color("white");
+    background-color: var(--white);
     padding: 30px;
     max-width: 900px;
     width: 80%;
@@ -18,7 +18,7 @@
     }
 
     @include mq("sm") {
-    box-shadow: 15px 15px 0 color("primary");
+      box-shadow: 15px 15px 0 var(--primary);
     }
   }
 }
