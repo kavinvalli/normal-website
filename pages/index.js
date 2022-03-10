@@ -41,7 +41,6 @@ export async function getServerSideProps() {
   }
 
   const song = await response.json();
-  console.log(song);
   const isPlaying = song.is_playing;
   const title = song.currently_playing_type !== "ad" ? song.item.name : "AD";
   const artist =
