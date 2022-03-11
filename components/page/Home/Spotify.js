@@ -10,6 +10,16 @@ export default function Spotify({
   return (
     <div className={styles.spotifyDiv}>
       <h2>Listening To</h2>
+      {isPlaying && (
+        <div style={{ display: "flex" }}>
+          <span className={styles.barWrapper}>
+            <span className={`${styles.bar} ${styles.bar1}`}></span>
+            <span className={`${styles.bar} ${styles.bar2}`}></span>
+            <span className={`${styles.bar} ${styles.bar3}`}></span>
+          </span>
+          Now playing
+        </div>
+      )}
       {isPlaying ? (
         <>
           <img
@@ -24,7 +34,7 @@ export default function Spotify({
           <p>{artist}</p>
         </>
       ) : (
-        <p>Nothing</p>
+        <strong>Nothing</strong>
       )}
     </div>
   );

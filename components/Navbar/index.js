@@ -12,6 +12,11 @@ function Navbar() {
   function changeTheme() {
     if (typeof window != undefined) {
       document.body.classList.toggle("darkTheme");
+      const theme = window.localStorage.getItem("KDV_THEME");
+      window.localStorage.setItem(
+        "KDV_THEME",
+        !theme ? "light" : theme === "dark" ? "light" : "dark"
+      );
     }
   }
   return (

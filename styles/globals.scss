@@ -15,11 +15,26 @@
   --black: #f0f6fc;
 }
 
+// set selection background color to var(--primary)
+::selection {
+  background-color: var(--primary);
+  color: white;
+}
+
+// set mozilla selection background color to var(--primary)
+::-moz-selection {
+  background-color: var(--primary);
+  color: white;
+}
+
 html,
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: var(--black);
+  transition-property: color, background-color;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
 }
 
 a {
