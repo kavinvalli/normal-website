@@ -1,8 +1,9 @@
-export default function handler(req, res) {
-  const formData = require("form-data");
-  const Mailgun = require("mailgun.js");
-  const DOMAIN = "mg.kavin.me";
+const formData = require("form-data");
+const Mailgun = require("mailgun.js");
 
+const DOMAIN = "mg.kavin.me";
+
+export default async function handler(req, res) {
   const mailgun = new Mailgun(formData);
   const client = mailgun.client({
     username: "api",
@@ -16,14 +17,11 @@ export default function handler(req, res) {
     text: req.body.message,
   };
 
-  client.messages
-    .create(DOMAIN, messageData)
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err) {
+    return res.status(500).send(err);
+  }
 
   return res.status(200).json({});
 }
