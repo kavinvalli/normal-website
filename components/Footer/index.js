@@ -1,3 +1,10 @@
+import {
+  faFacebook,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
@@ -10,24 +17,24 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <i className="fab fa-github"></i>
+          <FontAwesomeIcon icon={faGithub} />
         </a>
         <a href="mailto:mail@kavin.me" target="_blank" rel="noreferrer">
-          <i className="fas fa-at"></i>
+          <FontAwesomeIcon icon={faAt} />
         </a>
         <a
           href="https://www.facebook.com/kavin.valli.25/"
           target="_blank"
           rel="noreferrer"
         >
-          <i className="fab fa-facebook"></i>
+          <FontAwesomeIcon icon={faFacebook} />
         </a>
         <a
           href="https://linkedin.com/in/kavinvalli"
           target="_blank"
           rel="noreferrer"
         >
-          <i className="fab fa-linkedin"></i>
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
     </footer>

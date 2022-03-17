@@ -1,5 +1,12 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import styles from "../styles/Contact.module.scss";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -46,24 +53,24 @@ function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          <i className="fab fa-github"></i>
+          <FontAwesomeIcon icon={faGithub} />
         </a>
         <a href="mailto:mail@kavin.me" target="_blank" rel="noreferrer">
-          <i className="fas fa-at"></i>
+          <FontAwesomeIcon icon={faAt}></FontAwesomeIcon>
         </a>
         <a
           href="https://www.facebook.com/kavin.valli.25/"
           target="_blank"
           rel="noreferrer"
         >
-          <i className="fab fa-facebook"></i>
+          <FontAwesomeIcon icon={faFacebook} />
         </a>
         <a
           href="https://linkedin.com/in/kavinvalli"
           target="_blank"
           rel="noreferrer"
         >
-          <i className="fab fa-linkedin"></i>
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
       <div className={styles.contactCard}>

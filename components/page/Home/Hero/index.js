@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./Hero.module.scss";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 function Hero({ onDownIconClick }) {
   return (
@@ -47,12 +49,14 @@ function Hero({ onDownIconClick }) {
         </a>
         , a chapter of the National Space Society
       </motion.p>
-      <motion.i
+      <motion.span
         animate={{ y: 20, display: ["none", "block"] }}
         transition={{ type: "spring", bounce: 0.7, duration: 0.9, delay: 1.5 }}
         onClick={onDownIconClick}
-        className={`fas fa-chevron-down ${styles.down}`}
-      ></motion.i>
+        className={styles.down}
+      >
+        <FontAwesomeIcon icon={faChevronDown} />
+      </motion.span>
     </section>
   );
 }

@@ -1,3 +1,5 @@
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
@@ -29,7 +31,7 @@ function Navbar() {
         </Link>
       ))}
       <button onClick={changeTheme}>
-        <i className="fas fa-moon"></i>
+        <FontAwesomeIcon icon={faMoon} />
       </button>
     </nav>
   );
