@@ -1,12 +1,13 @@
 @import "./variables";
 
 .projectCard {
-  background-color: var(--white);
+  background-color: var(--white) !important;
   border-radius: 36px;
   padding: 32px;
   display: flex;
   color: var(--black);
   grid-column: 1 / span 2;
+  text-decoration: none !important;
 
   &:nth-child(odd) {
     @include mq("md") {
@@ -27,11 +28,12 @@
 }
 
 .largeProjectCard {
+  text-decoration: none !important;
   grid-column: 1 / span 2;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: #222a34;
+  background-color: #222a34 !important;
   height: 150px;
   color: white;
   position: relative;

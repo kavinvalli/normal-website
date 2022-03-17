@@ -60,6 +60,25 @@ h3 {
   color: var(--primary);
 }
 
+.darkTheme {
+  h3 {
+    display: inline;
+    background-color: var(--primary);
+    color: white;
+  }
+
+  a {
+    background-color: var(--primary);
+    color: white;
+    text-decoration: underline;
+  }
+
+  strong {
+    color: white;
+    background-color: var(--primary);
+  }
+}
+
 strong {
   color: var(--primary);
 }

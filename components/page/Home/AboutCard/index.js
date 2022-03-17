@@ -23,8 +23,10 @@ function AboutCard({ aboutRef }) {
         </div>
         <div className="skills">
           <h3>Skills</h3>
-          I am experienced with Javascript, Typescript and Python and the web
-          technologies dominating at the time:
+          <p>
+            I am experienced with Javascript, Typescript and Python and the web
+            technologies dominating at the time:
+          </p>
           <br />
           <strong>core:</strong> HTML, CSS and Node.js
           <br />
