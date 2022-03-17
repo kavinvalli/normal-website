@@ -1,9 +1,19 @@
+import { motion } from "framer-motion";
 import styles from "./AboutCard.module.scss";
 
 function AboutCard({ aboutRef }) {
   return (
     <div ref={aboutRef} className={styles.aboutSection}>
-      <div className={styles.aboutCard}>
+      <motion.div
+        initial={{ transform: "translate(15px, 15px)", boxShadow: "none" }}
+        whileInView={{
+          transform: "translate(0px, 0px)",
+          boxShadow: "15px 15px 0 var(--primary)",
+        }}
+        transition={{ duration: 0.5, delay: 1 }}
+        viewport={{ once: true }}
+        className={styles.aboutCard}
+      >
         <div className="edu">
           <h3>Education</h3>
           <p>
@@ -28,7 +38,7 @@ function AboutCard({ aboutRef }) {
           <br />
           <br />I also have experience with Mobile Development with Flutter.
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
