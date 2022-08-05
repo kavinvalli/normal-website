@@ -17,26 +17,25 @@ function AboutCard({ aboutRef }) {
         <div className="edu">
           <h3>Education</h3>
           <p>
-            I am a Grade 11 student at Delhi Public School, R.K. Puram. I am
+            I am a Grade 12 student at Delhi Public School, R.K. Puram. I am
             also a member of Enship and Exun Clan, the Tech Club.
           </p>
         </div>
         <div className="skills">
           <h3>Skills</h3>
           <p>
-            I am experienced with Javascript, Typescript and Python and the web
+            I am experienced with Javascript, Typescript, PHP and Python and the web
             technologies dominating at the time:
           </p>
           <br />
-          <strong>core:</strong> HTML, CSS and Node.js
+          <strong>core:</strong> HTML, CSS, Node.js and PHP
           <br />
-          <strong>frameworks:</strong> Express, Adonis.js, React, Gatsby, NextJS
-          and Django
+          <strong>frameworks:</strong> EExpress, React, Gatsby, NextJS, RemixJS, Django and Laravel
           <br />
           <strong>databases:</strong> MongoDB, PostgreSQL, MySQL, and SQLite
           <br />
           I also have knowledge of basic shell scripting and my dotfiles can be
-          found here.
+          found <a href="https://github.com/kavinvalli/.dotfiles" target="_blank" rel="noreferrer">here</a>.
           <br />
           <br />I also have experience with Mobile Development with Flutter.
         </div>
