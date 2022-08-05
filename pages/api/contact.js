@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   const messageData = {
     from: "Kavin Website <website@mg.kavin.me>",
     to: "mail@kavin.me, kavinvalli@gmail.com",
-    subject: `Message from ${req.body.name}`,
+    subject: `Message from ${req.body.name}: ${req.body.email}`,
     text: req.body.message,
   };
 
