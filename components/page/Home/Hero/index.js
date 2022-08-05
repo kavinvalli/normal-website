@@ -35,7 +35,7 @@ function Hero({ onDownIconClick }) {
         <a href="https://tricycle.life" target="_blank" rel="noreferrer">
           Tricycle
         </a>{" "}
-        and{" "}
+        and the President of{" "}
         <a href="https://exunclan.com" target="_blank" rel="noreferrer">
           Exun Clan
         </a>
