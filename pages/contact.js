@@ -81,12 +81,14 @@ function Contact() {
             value={name}
             placeholder="Name"
             onChange={(e) => setName(e.target.value)}
+            required
           />
           <input
             type="email"
             value={email}
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <textarea
             name="message"
@@ -96,6 +98,7 @@ function Contact() {
             id="message"
             cols="30"
             rows="10"
+            required
           ></textarea>
           <button type="submit">Send</button>
         </form>
