@@ -43,7 +43,9 @@ export default function Spotify({
               </div>
             </>
           ) : (
-            <strong>I&apos;m not listening to any song currently</strong>
+            <strong style={{ padding: "6px" }}>
+              I&apos;m not listening to any song currently
+            </strong>
           )}
         </div>
       </div>

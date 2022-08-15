@@ -3,7 +3,7 @@
 .projectCard {
   background-color: var(--white) !important;
   border-radius: 36px;
-  padding: 32px;
+  padding: 32px !important;
   display: flex;
   color: var(--black);
   grid-column: 1 / span 2;
