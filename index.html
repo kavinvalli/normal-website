@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kavin Desi Valli</title>
+  </head>
+  <body>
+    <h1>Hi, I am Kavin</h1>
+    <small>This is the most responsive website that you will find.</small>
+    <p>
+      My name is Kavin and I am a fullstack web developer experienced in
+      Javascript, Typescript, Python and PHP and have also worked with
+      frameworks like ReactJS, Express, Django and Laravel. I also have
+      experience doing App Development with Flutter.
+    </p>
+    <p>
+      I am a high school student at
+      <a href="//dpsrkp.net" target="_blank">Delhi Public School, R.K. Puram</a
+      >. I am the President of the school tech club,
+      <a href="//exunclan.com">Exun Clan</a>. I am also a Chapter Officer at the
+      <a href="//newdelhi.nss.org">New Delhi Space Society</a>, a chapter of the
+      National Space Society, USA.
+    </p>
+    <ul>
+      <li><a href="mailto:mail@kavin.me">Email</a></li>
+      <li><a href="//github.com/kavinvalli" target="_blank">Github</a></li>
+      <li>
+        <a href="//linkedin.com/in/kavinvalli" target="_blank">Linkedin</a>
+      </li>
+      <li><a href="//twitter.com/kavinvalli" target="_blank">Twitter</a></li>
+      <li>
+        <a href="./Resume-Kavin-Desi-Valli.pdf" target="_blank"
+          >Resume (generated using Linkedin - so you might as well just open my
+          linkedin)</a
+        >
+      </li>
+    </ul>
+    <h2>Projects</h2>
+    <ul id="projects"></ul>
+  </body>
+  <script>
+    const fetchProjects = async () => {
+      const projects = await (
+        await fetch("https://www.kavin.me/api/projects")
+      ).json();
+      console.log(projects);
+      for (let project of projects) {
+        document.querySelector("#projects").innerHTML += `
+<li><a href="${project.link}" target="_blank"><strong>${
+          project.name
+        }</strong> <small>made using ${project.stack.join(
+          ", "
+        )}</small></a><br>${project.description}</li>
+        `;
+      }
+    };
+
+    fetchProjects();
+  </script>
+</html>
