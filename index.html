@@ -5,40 +5,152 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kavin Desi Valli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #824cfa;
+      }
+      body,
+      height {
+        background-color: #fffff6;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        color: #444;
+        font-family: "Public Sans", sans-serif;
+
+        font-size: 16px;
+        line-height: 1.5;
+
+        border-top: 4px solid var(--primary);
+
+        display: flex;
+        flex-direction: row;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 500px;
+        padding: 40px;
+      }
+
+      .heading {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .heading img {
+        width: 50px;
+        height: 50px;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: #eaeaef;
+        text-underline-offset: 2px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      li {
+        margin: 8px 0;
+      }
+
+      .projects {
+        margin-top: 40px;
+      }
+
+      .heading p,
+      h2 {
+        margin: 0;
+      }
+
+      @media (max-width: 1100px) {
+        body {
+          flex-direction: column;
+        }
+
+        .container {
+          padding: 40px 0 0 40px;
+          max-width: 600px;
+        }
+
+        .projects {
+          padding: 0 40px;
+          max-width: 600px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>Hi, I am Kavin</h1>
-    <small>This is the most responsive website that you will find.</small>
-    <p>
-      My name is Kavin and I am a fullstack web developer experienced in
-      Javascript, Typescript, Python and PHP and have also worked with
-      frameworks like ReactJS, Express, Django and Laravel. I also have
-      experience doing App Development with Flutter.
-    </p>
-    <p>
-      I am a high school student at
-      <a href="//dpsrkp.net" target="_blank">Delhi Public School, R.K. Puram</a
-      >. I am the President of the school tech club,
-      <a href="//exunclan.com">Exun Clan</a>. I am also a Chapter Officer at the
-      <a href="//newdelhi.nss.org">New Delhi Space Society</a>, a chapter of the
-      National Space Society, USA.
-    </p>
-    <ul>
-      <li><a href="mailto:mail@kavin.me">Email</a></li>
-      <li><a href="//github.com/kavinvalli" target="_blank">Github</a></li>
-      <li>
-        <a href="//linkedin.com/in/kavinvalli" target="_blank">Linkedin</a>
-      </li>
-      <li><a href="//twitter.com/kavinvalli" target="_blank">Twitter</a></li>
-      <li>
-        <a href="./Resume-Kavin-Desi-Valli.pdf" target="_blank"
-          >Resume (generated using Linkedin - so you might as well just open my
-          linkedin)</a
-        >
-      </li>
-    </ul>
-    <h2>Projects</h2>
-    <ul id="projects"></ul>
+    <div class="container">
+      <div class="heading">
+        <img src="me.jpeg" alt="Me" />
+        <p>
+          <strong>Kavin Valli</strong
+          ><span style="color: #666">, student and developer</span>
+        </p>
+      </div>
+      <p>
+        My name is <strong>Kavin</strong> and I am a
+        <strong>fullstack web developer</strong>
+        experienced in
+        <strong>Javascript, Typescript, Python and PHP</strong> and have also
+        worked with frameworks like
+        <strong>ReactJS, Express, Django and Laravel</strong>. I also have
+        experience doing <strong>App Development with Flutter</strong>.
+      </p>
+      <p>
+        I am a high school student at
+        <a href="//dpsrkp.net" target="_blank" style="color: #008800"
+          >Delhi Public School, R.K. Puram</a
+        >. I am the President of the school tech club,
+        <a href="//exunclan.com" target="_blank" style="color: #2977f5"
+          >Exun Clan</a
+        >. I am also a Chapter Officer at the
+        <a
+          href="//newdelhi.nss.org"
+          target="_blank"
+          style="color: rgb(110, 85, 192)"
+          >New Delhi Space Society</a
+        >, a chapter of the National Space Society, USA.
+      </p>
+      <ul>
+        <li><a href="mailto:mail@kavin.me">Email</a></li>
+        <li><a href="//github.com/kavinvalli" target="_blank">Github</a></li>
+        <li>
+          <a href="//linkedin.com/in/kavinvalli" target="_blank">Linkedin</a>
+        </li>
+        <li><a href="//twitter.com/kavinvalli" target="_blank">Twitter</a></li>
+        <li>
+          <a href="./Resume-Kavin-Desi-Valli.pdf" target="_blank"
+            >Resume (generated using Linkedin - so you might as well just open
+            my linkedin)</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="projects">
+      <h2>Projects</h2>
+      <ul id="projects"></ul>
+    </div>
   </body>
   <script>
     const fetchProjects = async () => {
