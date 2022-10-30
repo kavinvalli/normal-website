@@ -88,13 +88,28 @@
         }
 
         .container {
-          padding: 40px 0 0 40px;
+          padding: 40px 40px 0 40px;
           max-width: 600px;
         }
 
         .projects {
           padding: 0 40px;
           max-width: 600px;
+        }
+      }
+
+      @media (max-width: 300px) {
+        .heading {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .container {
+          padding: 40px 20px 0 20px;
+        }
+
+        .projects {
+          padding: 0 20px;
         }
       }
     </style>
